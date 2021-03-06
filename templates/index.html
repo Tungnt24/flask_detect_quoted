@@ -21,12 +21,14 @@ body {
 .left {
   left: 0;
   background-color: #111;
+  font-size: medium;
 }
 
 .right {
   right: 0;
   background-color: gray;
   color: black;
+  font-size: medium;
 }
 
 .centered {
@@ -47,23 +49,25 @@ body {
 
 <div class="split left">
   <div class="centered">
+    <form action="/reset" method="POST">
+      <input type="submit" value="RESET ALL">
+      </form>
     <h2>A</h2>
     <form action="/message" method="POST">
         <input type="hidden" name="user" value="A">
-        <input type="submit" value="Submit">
-        <br><br>
-        <textarea name="message" rows="10" cols="60"></textarea>
-        <br><br>
+        <input type="submit" value="Send">
+        <textarea name="message" rows="5" cols="60"></textarea>
       </form>
       <h3>SENT</h3>
-      <textarea  rows="5" cols="60" disabled>{{sent}}</textarea>
-      <br><br>
+      <textarea  rows="4" cols="60" disabled>{{sent}}</textarea>
+      <h3>QUOTE for reply</h3>
+      <textarea  rows="4" cols="60" disabled>{{quote_a_sent}}</textarea>
+        <h3>QUOTE for reply 2</h3>
+        <textarea  rows="4" cols="60" disabled>{{quote_a_sent2}}</textarea>
       <h3>INBOX</h3>
-      <textarea  rows="5" cols="60" disabled>{{inbox}}</textarea>
-      <br><br>
-      <h3>QUOTE</h3>
-      <textarea  rows="5" cols="60" disabled>{{quote}}</textarea>
-        <br><br>
+      <textarea  rows="4" cols="60" disabled>{{inbox}}</textarea>
+      <h3>QUOTE from received mail</h3>
+      <textarea  rows="4" cols="60" disabled>{{quote_a_inbox}}</textarea>
   </div>
 </div>
 
@@ -72,20 +76,19 @@ body {
       <h2>B</h2>
     <form action="/message" method="POST">
         <input type="hidden" name="user" value="B">
-        <input type="submit" value="Submit">
-        <br><br>
-        <textarea name="message" rows="10" cols="60"></textarea>
-        <br><br>
+        <input type="submit" value="Send">
+        <textarea name="message" rows="5" cols="60"></textarea>
       </form>
       <h3>SENT</h3>
-      <textarea  rows="5" cols="60" disabled>{{sent_b}}</textarea>
-      <br><br>
+      <textarea  rows="4" cols="60" disabled>{{sent_b}}</textarea>
+      <h3>QUOTE for reply</h3>
+      <textarea  rows="4" cols="60" disabled>{{quote_b_sent}}</textarea>
+        <h3>QUOTE for reply 2</h3>
+        <textarea  rows="4" cols="60" disabled>{{quote_b_sent2}}</textarea>
       <h3>INBOX</h3>
-      <textarea  rows="5" cols="60" disabled>{{inbox_b}}</textarea>
-      <br><br>
-      <h3>QUOTE</h3>
-      <textarea  rows="5" cols="60" disabled>{{quote_b}}</textarea>
-        <br><br>
+      <textarea  rows="4" cols="60" disabled>{{inbox_b}}</textarea>
+      <h3>QUOTE from received mail</h3>
+      <textarea  rows="4" cols="60" disabled>{{quote_b_inbox}}</textarea>
   </div>
 </div>
      

@@ -2,15 +2,19 @@
     "A": [
         {
             "SENT": "",
+            "QUOTE_SENT": "",
+            "QUOTE_SENT2": "",
             "INBOX": "",
-            "QUOTE": ""
+            "QUOTE_INBOX": ""
         }
     ],
     "B": [
         {
             "SENT": "",
+            "QUOTE_SENT": "",
+            "QUOTE_SENT2": "",
             "INBOX": "",
-            "QUOTE": ""
+            "QUOTE_INBOX": ""
         }
     ]
 }
